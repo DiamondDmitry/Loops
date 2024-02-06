@@ -7,6 +7,7 @@ namespace Loops
         static void Main(string[] args)
         {
             // for
+            Console.WriteLine("Задание с циклом for:" + "\n");
             var i = 0;
             for (i = 1; i <= 10; i++)
             {
@@ -21,6 +22,7 @@ namespace Loops
             }
 
             // while
+            Console.WriteLine("\n" + "\n" + "Задание с циклом while:" + "\n");
             var count = 1;
             while (count <= 10)
             {
@@ -31,10 +33,45 @@ namespace Loops
                 count++;
             }
 
-            //do-while
+            //do-while v1
+            Console.WriteLine("\n" + "\n" + "Задание с циклом do-while вариант 1:" + "\n");
             int guess = 0;
+            do
+            {
+                while (true)
+                {
+                    Console.WriteLine("Введите число: ");
+                    var text = Console.ReadLine();
+                    if (int.TryParse(text, out guess))
+                    {
+                       break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Не удалось распознать число, попробуйте еще раз.");
+                    }
+                }
+
+                if (guess == 5)
+                {
+                    Console.WriteLine("Угадали!");
+                }
+                else if (guess < 5)
+                {
+                    Console.WriteLine("Загаданное число больше");
+                }
+                else if (guess > 5)
+                {
+                    Console.WriteLine("Загаданное число меньше");
+                }
+            }
+            while (guess != 5);
+
+            //do-while v2
+            Console.WriteLine("\n" + "\n" + "Задание с циклом do-while вариант 2:" + "\n");
+            int guess2 = 0;
             Random rnd = new Random();
-            var secret = rnd.Next(1,10);
+            var secret = rnd.Next(1, 10);
             i = 1;
             Console.WriteLine("Я загадал число от 1 до 10");
 
@@ -42,10 +79,10 @@ namespace Loops
             do
             {
                 while (true)
-                { 
+                {
                     Console.WriteLine("Введите число: ");
                     string text = Console.ReadLine();
-                    if (int.TryParse(text, out guess))
+                    if (int.TryParse(text, out guess2))
                     {
                         break;
                     }
@@ -55,16 +92,16 @@ namespace Loops
                     }
                 }
                 i++;
-                if (guess == secret)
+                if (guess2 == secret)
                 {
                     Console.WriteLine("Угадали!");
                     break;
                 }
-                else if (guess < secret)
+                else if (guess2 < secret)
                 {
                     Console.WriteLine("Загаданное число больше");
                 }
-                else if (guess > secret)
+                else if (guess2 > secret)
                 {
                     Console.WriteLine("Загаданное число меньше");
                 }
@@ -76,7 +113,7 @@ namespace Loops
             while (i <= 5);
 
             // foreach
-
+            Console.WriteLine("\n" + "\n" + "Задание с циклом foreach:" + "\n");
             int[] numbers = new int[5] { 10, 20, 30, 40, 50 };
             foreach (var item in numbers)
             {
