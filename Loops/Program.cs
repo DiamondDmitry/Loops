@@ -8,8 +8,7 @@ namespace Loops
         {
             // for
             Console.WriteLine("Задание с циклом for:" + "\n");
-            var i = 0;
-            for (i = 1; i <= 10; i++)
+            for (var i = 1; i <= 10; i++)
             {
                 if (i % 2 == 0)
                 {
@@ -72,10 +71,8 @@ namespace Loops
             int guess2 = 0;
             Random rnd = new Random();
             var secret = rnd.Next(1, 10);
-            i = 1;
-            Console.WriteLine("Я загадал число от 1 до 10");
-
-            Console.WriteLine("попробуйте отгадать у вас 5 попыток.");
+            var c = 1;
+            Console.WriteLine("Я загадал число от 1 до 10" + "\n" + "попробуйте отгадать у вас 5 попыток.");
             do
             {
                 while (true)
@@ -91,7 +88,7 @@ namespace Loops
                         Console.WriteLine("Не удалось распознать число, попробуйте еще раз.");
                     }
                 }
-                i++;
+                c++;
                 if (guess2 == secret)
                 {
                     Console.WriteLine("Угадали!");
@@ -105,12 +102,12 @@ namespace Loops
                 {
                     Console.WriteLine("Загаданное число меньше");
                 }
-                if (i > 5)
+                if (c > 5)
                 {
                     Console.WriteLine("Вы проиграли");
                 }
             }
-            while (i <= 5);
+            while (c <= 5);
 
             // foreach
             Console.WriteLine("\n" + "\n" + "Задание с циклом foreach:" + "\n");
