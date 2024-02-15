@@ -8,8 +8,8 @@ namespace Loops
 {
     public class Bottle
     {
-        public int Volume {  get; set; }
-        public string Material {  get; set; }
+        public int Volume { get; set; }
+        public string Material { get; set; }
         public string FormFactor { get; set; }
 
         public void Fall()
@@ -52,15 +52,15 @@ namespace Loops
             CarColor = carColor;
         }
         public string CarClass { get; set; }
-        private int NumbersOfDoors {  get; set; }
-        public bool IsCabriolet {  get; set; }
+        private int NumbersOfDoors { get; set; }
+        public bool IsCabriolet { get; set; }
         public string CarColor { get; set; }
 
         public int GetNumberOfDoors()
         {
             return NumbersOfDoors;
         }
-        public void StartEngine ()
+        public void StartEngine()
         {
             Console.WriteLine("Врум врум");
         }
