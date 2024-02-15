@@ -7,16 +7,24 @@ namespace Loops
         static void Main()
         {
             Console.WriteLine("Добро пожаловать в магазин");
-            Console.WriteLine("У нас есть бутылка");
+            Console.WriteLine("У нас есть машина");
             
-            var bottle = new Bottle();
-            bottle.Volume = 100;
-            bottle.FormFactor = "плоская";
-            bottle.Material = "пластикова";
+            var suv = new Car(4, "Black");
+            var suv1 = new Car(11);
 
-            Console.WriteLine("Это бутылка " +  bottle.Material);
-            Console.WriteLine("Она " + bottle.FormFactor);
-            Console.WriteLine("Ее обьем " + bottle.Volume);
+            int numberOfDoors = suv.GetNumberOfDoors();
+            int numberOfDoors1 = suv1.GetNumberOfDoors();
+
+
+            Console.WriteLine("У нее дверей: " + numberOfDoors);
+            Console.WriteLine("У нее цвет: " + suv.CarColor);
+
+            Console.WriteLine("\nУ нас есть еще одна машина");
+
+            Car cabriolet = new Car(2,"White");
+            Console.WriteLine("У нее дверей: " + numberOfDoors1);
+            Console.WriteLine("У нее цвет: " + cabriolet.CarColor);
+
         }
     }
 }

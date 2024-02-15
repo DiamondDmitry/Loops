@@ -40,23 +40,37 @@ namespace Loops
         }
     }
 
-    class Car
+    public class Car
     {
-        string CarClass { get; set; }
-        int NumbersOfDoors {  get; set; }
-        bool IsCabriolet {  get; set; }
+        public Car(int numberOfDoors)
+        {
+            NumbersOfDoors = numberOfDoors;
+        }
+        public Car(int numberOfDoors, string carColor)
+        {
+            NumbersOfDoors = numberOfDoors;
+            CarColor = carColor;
+        }
+        public string CarClass { get; set; }
+        private int NumbersOfDoors {  get; set; }
+        public bool IsCabriolet {  get; set; }
+        public string CarColor { get; set; }
 
-        void StartEngine ()
+        public int GetNumberOfDoors()
+        {
+            return NumbersOfDoors;
+        }
+        public void StartEngine ()
         {
             Console.WriteLine("Врум врум");
         }
 
-        void StopEngine()
+        public void StopEngine()
         {
             Console.WriteLine("Заглушил двигатель");
         }
 
-        void Drive()
+        public void Drive()
         {
             Console.WriteLine("Машина едет");
         }
