@@ -10,6 +10,8 @@ namespace Loops
     {
         static void Main()
         {
+            int choice = Convert.ToInt32(Console.ReadLine());
+
             FruitStore bestFruits = new FruitStore();
             string fruit = "Orange";
             bestFruits.OrderProduct(fruit, 5, "Mexico Orange");
